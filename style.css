@@ -5,6 +5,22 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+::-webkit-scrollbar {
+  display: none;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 .fpage {
   height: 100vh;
 }
@@ -149,4 +165,37 @@ hr {
 h1 {
   color: white;
   text-align: center;
+}
+.projects {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+.projects::before {
+  content: "";
+  position: absolute;
+  top: 10%;
+  bottom: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 5px solid chartreuse;
+  border-radius: 20px;
+  height: 65vh;
+}
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5rem;
+  row-gap: 3rem;
+}
+.card1 {
+  width: 200px;
+  height: 150px;
+  border: 1px solid #fff;
+  margin: 10px;
 }
